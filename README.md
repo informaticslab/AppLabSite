@@ -10,7 +10,7 @@ Cardboard development for the Informatics Innovation Unit
 * Wordpress capable webserver of some sort
 
 ##Issue Tracker
-* Cardboard [Jira](https://code.phiresearchlab.org/jira/browse/AL)
+* AppLab [Jira](https://code.phiresearchlab.org/jira/browse/AL)
 
 ## Roadmap
 
