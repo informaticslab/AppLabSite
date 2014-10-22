@@ -1,4 +1,4 @@
-Cardboard
+AppLabSite
 ======
 
 Cardboard development for the Informatics Innovation Unit
@@ -7,11 +7,10 @@ Cardboard development for the Informatics Innovation Unit
 
 
 # Requirements
-* Android Phone or simulator
-* Google Cardboard
+* Wordpress capable webserver of some sort
 
 ##Issue Tracker
-* Cardboard [Jira](https://code.phiresearchlab.org/jira/browse/CAR)
+* Cardboard [Jira](https://code.phiresearchlab.org/jira/browse/AL)
 
 ## Roadmap
 
@@ -24,7 +23,7 @@ All comments, messages, pull requests, and other submissions received through CD
 
 ##Hat-tips
 
-*Google X
+*Wordpress
 
 ## License
 
