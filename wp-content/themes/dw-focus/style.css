@@ -8,3 +8,42 @@ Version: 1.0.6
 License: GNU General Public License
 License URI: license.txt
 */
+
+
+.widget-easy-twitter-feed-widget-global-wrapper .row  {width:230px; margin-left:0px}
+
+
+
+.navbar-inner li.login {display:none}
+
+.synved-link-type-category {color: #0398d6}
+
+.synved-link-type-page{color: #0398d6}
+
+div.entry-content img {border:1px solid #a3a3a3}
+
+div.download-attachments img.attachment-icon {border:0px solid}
+
+#breadcrumbs{
+    list-style:none;
+    margin:10px 0;
+    overflow:hidden;
+}
+ 
+#breadcrumbs li{
+    float:left;
+    margin-right:5px;
+}
+ 
+#breadcrumbs .separator{
+
+    font-size:14px;
+    color:#999;
+}
+
+#breadcrumbs .breadcrumbslinks{
+
+}
+
+
+

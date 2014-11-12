@@ -7,8 +7,8 @@
 
 get_header(); ?>
 
-    <div id="primary" class="site-content span9">
-
+    <div id="primary" class="site-content span9" ">
+<?php the_breadcrumb(); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

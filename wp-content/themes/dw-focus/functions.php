@@ -116,6 +116,7 @@ function dw_focus_setup() {
 
     /**
      * This theme uses wp_nav_menu() in one location.
+
      */
     register_nav_menus( array(
         'primary' => __( 'Primary Menu', 'dw_focus' ),
@@ -882,7 +883,7 @@ if( ! function_exists('dw_top15') ) {
         ?>
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
             <span class="number"><?php echo $r->post_count; ?></span>
-            <span><?php echo $display_type == 'today' && $is_news_today ? __('New Articles today','dw_focus') : __('Must read articles','dw_focus'); ?> <i class="icon-caret-down"></i></span>
+            <span><?php echo $display_type == 'today' && $is_news_today ? __('New Articles today','dw_focus') : __('New Articles','dw_focus'); ?> <i class="icon-caret-down"></i></span>
         </a>
         <?php
 
@@ -1075,3 +1076,45 @@ function change_protected_title_prefix() {
     return '%s';
 }
 add_filter('protected_title_format', 'change_protected_title_prefix');
+
+function the_breadcrumb() {
+    global $post;
+    echo '<ul id="breadcrumbs">';
+    if (!is_home()) {
+        echo '<li ><a class="breadcrumbslinks" href="';
+        echo get_option('home');
+        echo '">';
+        echo 'Home';
+        echo '</a></li><li class="separator">/</li>';
+        if (is_category() || is_single()) {
+            echo '<li>';
+            the_category(' </li><li class="separator">/</li><li> ');
+            if (is_single()) {
+                echo '</li><li class="separator"> / </li><li>';
+                the_title();
+                echo '</li>';
+            }
+        } elseif (is_page()) {
+            if($post->post_parent){
+                $anc = get_post_ancestors( $post->ID );
+                $title = get_the_title();
+                foreach ( $anc as $ancestor ) {
+                    $output = '<li><a class="breadcrumbslinks" href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator">/</li>';
+                }
+                echo $output;
+                echo '<span title="'.$title.'">'.$title.'</span>';
+            } else {
+                echo '<li>'.get_the_title().'</li>';
+            }
+        }
+    }
+    elseif (is_tag()) {single_tag_title();}
+    elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
+    elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
+    elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
+    elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
+    elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
+    elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
+    echo '</ul>';
+}
+

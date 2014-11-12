@@ -71,8 +71,8 @@
         <div id="site-info" class="container">
             <div class="clearfix">
                 <div class="copyright">
-                    <p>Copyright &copy; 2012 by <a href="http://demo.designwall.com/dw-focus/" title="DW Focus" rel="nofollow">DW Focus</a>. Proudly powered by <a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">WordPress</a></p>
-                    <p><a title="Responsive WordPress Themes for Free and Premium" href="http://designwall.com/" rel="nofollow">WordPress Theme by DesignWall</a></p>
+                    <p>Center for Surveillance, Epidemiology, and Laboratory Services | Office of Public Health Scientific Services | <br />Centers for Disease Control and Prevention | Department of Health and Human Services</p>
+                    <p><a title="Responsive WordPress Themes for Free and Premium" href="http://designwall.com/" rel="nofollow">Powered by Wordpress - Theme by DesignWall</a></p>
                 </div>
                 <div class="logo">
                     <a class="small-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
